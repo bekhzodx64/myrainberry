@@ -1,0 +1,107 @@
+@import '_reset'
+
+body
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    color: #fff
+
+.container
+    width: 100%
+    max-width: 1460px
+    padding: 0 30px
+    margin: 0 auto
+
+.right
+    display: flex
+    justify-content: flex-end
+
+.main
+    height: 100vh
+    background-color: rgba(129, 78, 27, .4)
+    background: url("../img/bg.jpg") no-repeat top
+    background-size: cover
+    overflow: auto
+    &__inner
+        display: flex
+        width: 100%
+        height: 100vh
+        align-items: center
+        justify-content: space-around
+        padding-top: 40px
+    &__left
+        width: 40%
+        margin-bottom: auto
+    &__logo
+        display: block
+        width: 100%
+        height: auto
+    &__right
+        width: 40%
+        margin-top: auto
+        padding-bottom: 40px
+    &__pic
+        display: block
+        width: 100%
+        height: auto
+    &__pic2
+        display: none
+        width: 100%
+        height: auto
+    &__form
+        &_text
+            font-size: clamp(12px, 2.5vw, 25px)
+            font-weight: 700
+        &_input
+            width: 100%
+            font-size: clamp(10px, 2.5vw, 18px)
+            padding: 1em 12px
+            margin: 10px 0
+            outline: none
+            border: none
+            background-color: rgba(255, 255, 255, .8)
+            color: #3c3c3c
+            &::placeholder
+                color: rgba(60, 26, 0, 0.4)
+                font-size: clamp(10px, 2.5vw, 18px)
+        &_btn
+            display: inline-block
+            color: #fff
+            font-size: clamp(10px, 2.5vw, 20px)
+            padding: 0.5em 1.25em
+            background-color: #663300
+            border: none
+            outline: none
+
+@media screen and ( max-width: 768px )
+    .main
+        overflow: scroll
+        &__inner
+            flex-direction: column
+            align-items: center
+            height: 100vh
+            min-height: 530px
+            justify-content: space-around
+        &__left
+            width: 100%
+            margin: 0
+            margin-bottom: 20px
+        &__right
+            width: 100%
+            margin: 0
+        &__logo
+            max-width: 250px
+            margin: 0 auto
+        &__pic
+            display: none
+        &__pic2
+            display: block
+            max-width: 200px
+            margin: 0 auto
+        &__form
+            &_text
+                text-align: center
+            &_input
+                display: block
+                margin: 10px auto
+                max-width: 70%
+            &_btn
+                margin: 0 auto

@@ -1,0 +1,30 @@
+@import 'reset'
+
+body
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    color: #fff
+
+.container
+    width: 100%
+    max-width: 1500px
+    padding: 0 50px
+    margin: 0 auto
+
+.success
+    background-color: rgba(129, 78, 27, .4)
+    background: url("../img/bg.jpg") no-repeat top
+    background-size: cover
+    &__inner
+        display: flex
+        height: 100vh
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &__text
+        display: block
+        font-weight: 700
+        font-size: clamp(15px, 2.5vw, 25px)
+        margin-bottom: clamp(10px, 2.5vw, 20px)
+    &__back
+        color: #fff
+        font-size: clamp(10px, 2.5vw, 20px)
